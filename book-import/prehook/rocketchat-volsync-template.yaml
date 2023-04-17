@@ -1,14 +1,11 @@
 ---
 apiVersion: tower.ansible.com/v1alpha1
-kind: JobTemplate
+kind: AnsibleJob
 metadata:
-  name: volsynctest
-  namespace: aap
+  name: snow-create-change-record
+  namespace: book-import2
+  labels:
+    app.kubernetes.io/name: book-import2
 spec:
-  job_template_inventory: ACM Cluster Inventory
-  job_template_name: RocketChat Volsync
-  job_template_playbook: volsync/playbook.yml
-  job_template_project: VolSync Demo
-  tower_auth_secret: aap2-cred
-  job_template_credentials:
-  - "ACM Hub"
+  tower_auth_secret: aapaccess
+  job_template_name: snow-create-change-record
