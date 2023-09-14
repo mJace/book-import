@@ -1,0 +1,13 @@
+---
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  name: changebackend
+spec:
+  tower_auth_secret: aapaccess
+  job_template_name: haproxy
+  extra_vars:    
+    backend_servers:
+      - name: test-backend.apps.cluster-c6wqd.c6wqd.sandbox2982.opentlc.com
+        ip: test-backend.apps.cluster-c6wqd.c6wqd.sandbox2982.opentlc.com
+        port: 80

@@ -1,11 +1,26 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: book-import
+  name: prod-book-import
   labels:
-    name: book-import
+    name: prod-book-import
 spec:
   path: "/"
   to:
     kind: Service
-    name: book-import
+    name: prod-book-import
+
+
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: test-book-import
+  labels:
+    name: test-book-import
+spec:
+  path: "/"
+  to:
+    kind: Service
+    name: test-book-import

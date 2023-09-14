@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: book-import
+  name: prod-book-import
   labels:
-    name: book-import
+    name: prod-book-import
 spec:
   type: ClusterIP
   ports:
@@ -11,4 +11,21 @@ spec:
       targetPort: 8080
       protocol: TCP
   selector:
-    name: book-import
+    name: prod-book-import
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-book-import
+  labels:
+    name: test-book-import
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    name: test-book-import
