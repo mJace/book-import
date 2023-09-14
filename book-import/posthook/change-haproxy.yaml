@@ -8,8 +8,9 @@ spec:
   job_template_name: haproxy
   extra_vars:    
     backend_servers:
-      - name: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
-        ip: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
+      # Switch the name and ip for the route domain
+      - name: prod-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
+        ip: prod-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
         port: 80
       #- name: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
       #  ip: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
