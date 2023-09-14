@@ -9,5 +9,8 @@ spec:
   extra_vars:    
     backend_servers:
       - name: prod-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
-        ip: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
+        ip: prod-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
         port: 80
+      #- name: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
+      #  ip: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
+      #  port: 80
