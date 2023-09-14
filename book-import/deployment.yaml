@@ -5,7 +5,7 @@ metadata:
     name: prod-book-import
   name: prod-book-import
 spec:
-  replicas: 5
+  replicas: 0
   selector:
     matchLabels:
       name: prod-book-import
@@ -30,7 +30,7 @@ metadata:
     name: book-import
   name: test-book-import
 spec:
-  replicas: 0
+  replicas: 5
   selector:
     matchLabels:
       name: test-book-import
@@ -40,7 +40,7 @@ spec:
         name: test-book-import
     spec:
       containers:
-      - image: quay.io/jpacker/hugo-nginx:latest
+      - image: quay.io/rhn_support_jaliang/caturday:latest
         name: test-book-import
         ports:
         - containerPort: 8080
