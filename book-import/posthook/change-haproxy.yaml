@@ -8,6 +8,6 @@ spec:
   job_template_name: haproxy
   extra_vars:    
     backend_servers:
-      - name: test-backend.apps.cluster-c6wqd.c6wqd.sandbox2982.opentlc.com
-        ip: test-backend.apps.cluster-c6wqd.c6wqd.sandbox2982.opentlc.com
+      - name: prod-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
+        ip: test-book-import-book-import2.apps.cluster-zlk54.zlk54.sandbox2381.opentlc.com
         port: 80
